@@ -1,0 +1,19 @@
+{
+  "name": "mindfulness",
+  "version": "0.0.1",
+  "description": "Use this plugin to add minful mintes to mindfulness inside the Healthkit iOS APP.",
+  "cordova": {
+    "id": "cordova-plugin-healthkit-mindfulness",
+    "platforms": [ 
+      "ios"
+    ]
+  },
+  "keywords": [ 
+    "cordova",
+    "healthkit",
+    "mindfulness",
+    "cordova-ios",
+  ],
+  "author": "Rooz Far",
+  "license": "MIT"
+}
