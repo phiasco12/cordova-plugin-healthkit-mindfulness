@@ -524,20 +524,25 @@ static NSString *const HKPluginKeyUUID = @"UUID";
 #endif
         HKObjectType *type = nil;
 
-        if ([elem isEqual:@"HKWorkoutTypeIdentifier"]) {
+        /**if ([elem isEqual:@"HKWorkoutTypeIdentifier"]) {
             type = [HKObjectType workoutType];
         } else {
             type = [HealthKit getHKObjectType:elem];
-        }
-
-        if (type == nil) {
-			
-			[readDataTypes addObject:type];
+        }**/
+		
+		
+ type = [HKObjectType workoutType];  
+[readDataTypes addObject:type];
+   
+   /**if (type == nil) {
+           CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"readTypes contains an invalid value"];
+            [result setKeepCallbackAsBool:YES];
+            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 			
             // not returning deliberately to be future proof; other permissions are still asked
         } else {
             [readDataTypes addObject:type];
-        }
+        }**/
     }
 
     // write types
@@ -550,18 +555,23 @@ static NSString *const HKPluginKeyUUID = @"UUID";
 #endif
         HKObjectType *type = nil;
 
-        if ([elem isEqual:@"HKWorkoutTypeIdentifier"]) {
+		type = [HKObjectType workoutType];
+		[writeDataTypes addObject:type];
+		
+		
+        /**if ([elem isEqual:@"HKWorkoutTypeIdentifier"]) {
             type = [HKObjectType workoutType];
         } else {
             type = [HealthKit getHKObjectType:elem];
-        }
+        }**/
 
-        if (type == nil) {
-		
-			[writeDataTypes addObject:type];
+        /**if (type == nil) {
+          CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"readTypes contains an invalid value"];
+            [result setKeepCallbackAsBool:YES];
+            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
         } else {
             [writeDataTypes addObject:type];
-        }
+        }**/
     }
 
     [[HealthKit sharedHealthStore] requestAuthorizationToShareTypes:writeDataTypes readTypes:readDataTypes completion:^(BOOL success, NSError *error) {
