@@ -531,7 +531,7 @@ static NSString *const HKPluginKeyUUID = @"UUID";
         }**/
 		
 		
- type = [HKObjectType workoutType];  
+ type = [HealthKit getHKObjectType:elem]; 
 [readDataTypes addObject:type];
    
    /**if (type == nil) {
