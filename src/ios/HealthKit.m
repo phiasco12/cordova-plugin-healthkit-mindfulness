@@ -531,10 +531,6 @@ static NSString *const HKPluginKeyUUID = @"UUID";
         }
 
         if (type == nil) {
-           /* CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"readTypes contains an invalid value"];
-            [result setKeepCallbackAsBool:YES];
-            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];*/
-			
 			
 			[readDataTypes addObject:type];
 			
@@ -561,12 +557,8 @@ static NSString *const HKPluginKeyUUID = @"UUID";
         }
 
         if (type == nil) {
-           /* CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"readTypes contains an invalid value"];
-            [result setKeepCallbackAsBool:YES];
-            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];*/
-			
-			
-			[readDataTypes addObject:type];
+		
+			[writeDataTypes addObject:type];
         } else {
             [writeDataTypes addObject:type];
         }
