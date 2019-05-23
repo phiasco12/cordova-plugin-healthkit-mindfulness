@@ -1,0 +1,19 @@
+{
+  "name": "mindful",
+  "version": "0.0.1",
+  "description": "add mindfulness minutes to iOS HealthKit from your app.",
+  "cordova": {
+    "id": "cordova-plugin-healthkit-mindfulness",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "healthkit",
+    "ecosystem:cordova",
+    "cordova-ios",
+  ],
+  "author": "Rooz Far",
+  "license": "MIT"
+}

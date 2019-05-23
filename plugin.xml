@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-your-plugin-name" version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>mindful</name>
+
+    <js-module name="mindful" src="www/mindful.js">
+        <clobbers target="mindful" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+
+            <feature name="mindful">
+                <param name="ios-package" value="mindful" />
+            </feature>
+
+        </config-file>
+		
+    <preference name="HEALTH_READ_PERMISSION" default=" " />
+    <preference name="HEALTH_WRITE_PERMISSION" default=" " />
+    <config-file target="*-Info.plist" parent="NSHealthShareUsageDescription">
+      <string>$HEALTH_READ_PERMISSION</string>
+    </config-file>
+    <config-file target="*-Info.plist" parent="NSHealthUpdateUsageDescription">
+      <string>$HEALTH_WRITE_PERMISSION</string>
+    </config-file>
+
+    <config-file target="*/Entitlements-Debug.plist" parent="com.apple.developer.healthkit">
+      <true/>
+    </config-file>
+
+    <config-file target="*/Entitlements-Release.plist" parent="com.apple.developer.healthkit">
+      <true/>
+    </config-file>
+
+        <!-- Add in the plugin .swift files here -->
+        <source-file src="src/ios/mindful.swift" />
+
+        <!-- Add in the swift-support plugin by default -->
+        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
+    </platform>
+</plugin>
