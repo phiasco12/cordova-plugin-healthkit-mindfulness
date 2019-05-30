@@ -19,13 +19,14 @@
     </js-module>
 
     <platform name="ios">
-        <config-file target="config.xml" parent="/*">
 
-            <feature name="mindful">
-                <param name="ios-package" value="mindful" />
-            </feature>
-
-        </config-file>
+	    
+	    
+    <config-file target="config.xml" parent="/*">
+      <feature name="HealthKit">
+        <param name="ios-package" value="HealthKit"/>
+      </feature>
+    </config-file>    
 		
     <preference name="HEALTH_READ_PERMISSION" default=" " />
     <preference name="HEALTH_WRITE_PERMISSION" default=" " />
