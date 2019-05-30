@@ -20,35 +20,5 @@
 
     <platform name="ios">
 
-	    
-	    
-    <config-file target="config.xml" parent="/*">
-      <feature name="HealthKit">
-        <param name="ios-package" value="HealthKit"/>
-      </feature>
-    </config-file>    
-		
-    <preference name="HEALTH_READ_PERMISSION" default=" " />
-    <preference name="HEALTH_WRITE_PERMISSION" default=" " />
-    <config-file target="*-Info.plist" parent="NSHealthShareUsageDescription">
-      <string>$HEALTH_READ_PERMISSION</string>
-    </config-file>
-    <config-file target="*-Info.plist" parent="NSHealthUpdateUsageDescription">
-      <string>$HEALTH_WRITE_PERMISSION</string>
-    </config-file>
-
-    <config-file target="*/Entitlements-Debug.plist" parent="com.apple.developer.healthkit">
-      <true/>
-    </config-file>
-
-    <config-file target="*/Entitlements-Release.plist" parent="com.apple.developer.healthkit">
-      <true/>
-    </config-file>
-
-        <!-- Add in the plugin .swift files here -->
-        <source-file src="src/ios/mindful.swift" />
-
-        <!-- Add in the swift-support plugin by default -->
-        <dependency id="cordova-plugin-add-swift-support" version="2.0.2"/>
     </platform>
 </plugin>
