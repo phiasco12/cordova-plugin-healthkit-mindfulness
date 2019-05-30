@@ -1,19 +1,30 @@
 {
-  "name": "mindful",
-  "version": "0.0.1",
-  "description": "add mindfulness minutes to iOS HealthKit from your app.",
+  "name": "cordova-plugin-hello",
+  "version": "0.1.0",
+  "description": "A sample for a new cordova plugin",
   "cordova": {
-    "id": "cordova-plugin-healthkit-mindfulness",
+    "id": "cordova-plugin-hello",
     "platforms": [
-      "ios"
+      "android",
+      "ios",
+      "wp7"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/don/cordova-plugin-hello.git"
   },
   "keywords": [
     "cordova",
-    "healthkit",
+    "plugin",
+    "hello",
     "ecosystem:cordova",
-    "cordova-ios",
+    "cordova-android"
   ],
-  "author": "Rooz Far",
-  "license": "MIT"
+  "author": "Don Coleman",
+  "license": "Apache-2",
+  "bugs": {
+    "url": "https://github.com/don/cordova-plugin-hello/issues"
+  },
+  "homepage": "https://github.com/don/cordova-plugin-hello#readme"
 }
