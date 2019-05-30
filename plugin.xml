@@ -3,6 +3,16 @@
         xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>mindful</name>
+	
+  <description>
+    Interact with the iOS HealthKit SDK.
+  </description>
+
+  <author>Rooz</author>
+
+  <license>MIT</license>
+
+  <keywords>Health, HealthKit, Fit, Fitness, Birthdate, Gender, Height, Weight, Workout</keywords>
 
     <js-module name="mindful" src="www/mindful.js">
         <clobbers target="mindful" />
